@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="YUCHA — Yassine Alloul. Video editor, photographer &amp; designer crafting visuals that capture attention and tell stories. Based in Morocco.">
+<meta name="theme-color" content="#0b0b0b">
+<meta property="og:type" content="website"><meta property="og:title" content="YUCHA — Independent Visual Creator"><meta property="og:description" content="Video editor, photographer &amp; designer crafting visuals that capture attention and tell stories.">
+<meta property="og:image" content="assets/posters/honor-x7e.jpg"><!-- TODO: make this an absolute URL once deployed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0b'/%3E%3Ctext x='32' y='47' font-size='42' text-anchor='middle' font-family='Arial Black,sans-serif' fill='%23c8ff2e'%3EY%3C/text%3E%3C/svg%3E">
+<title>YUCHA — Independent Visual Creator</title>
+<script>var d=document.documentElement,s=function(k){try{return localStorage.getItem(k)}catch(e){return null}};d.dataset.theme=s('yt')||'dark';var l=s('yl');if(l=='fr'||l=='ar'){d.lang=l;d.dir=l=='ar'?'rtl':'ltr'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500&family=Cairo:wght@500;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0b;--ink:#efeee8;--mut:#8a8a85;--line:#262624;--acc:#c8ff2e;--h:'Bricolage Grotesque','Arial Narrow',Impact,sans-serif;--b:'Instrument Sans',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--bg)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--b);overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.w{padding-inline:clamp(18px,4vw,56px)}
+h1,h2,h3{font-family:var(--h);font-weight:800;line-height:.88;letter-spacing:-.035em;margin:0;text-transform:uppercase}
+.lbl{font:500 12px var(--b);letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.acc{color:var(--acc)}
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px clamp(18px,4vw,56px);mix-blend-mode:difference}
+.logo{font:800 22px var(--h);letter-spacing:-.04em}.logo sup{font-size:.5em;color:var(--acc)}
+.links{display:flex;gap:28px;align-items:center;font-size:14px}
+.links a:hover{color:var(--acc)}
+.cta{background:var(--acc);color:#0b0b0b;padding:11px 20px;border-radius:99px;font-weight:500;font-size:14px;display:inline-block;transition:transform .25s}
+.cta:hover{transform:translateY(-2px) rotate(-1.5deg)}
+.ghost{border:1px solid var(--ink);padding:11px 20px;border-radius:99px;font-size:14px;display:inline-block;transition:.25s}.ghost:hover{background:var(--ink);color:var(--bg)}
+.burger{display:none;font-size:14px;letter-spacing:.1em}
+@media(max-width:760px){.links{position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;font:800 14vw var(--h);text-transform:uppercase;transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);mix-blend-mode:normal;z-index:-1}.links.o{transform:none}.burger{display:block}nav{mix-blend-mode:normal}}
+/* hero */
+.hero{min-height:100svh;padding-top:110px;position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:end;overflow:hidden}
+.hero h1{font-size:clamp(46px,8.6vw,150px)}
+.hero h1 span{display:block;overflow:hidden}.hero h1 i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span:nth-child(2) i{animation-delay:.12s}
+@keyframes up{to{transform:none}}
+.hero p{max-width:440px;color:#c9c8c1;margin:26px 0}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.stack{position:relative;height:min(78vh,640px);min-height:380px}
+.ph{position:absolute;width:44%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#1a1a1a;box-shadow:0 30px 60px #0009;transition:transform .5s}
+.ph video{width:100%;height:100%;object-fit:cover;display:block}
+.ph:nth-child(1){left:0;top:12%;transform:rotate(-5deg)}.ph:nth-child(2){left:28%;top:0;z-index:2;width:46%}.ph:nth-child(3){right:0;top:22%;transform:rotate(5deg)}
+.stack:hover .ph:nth-child(1){transform:rotate(-8deg) translateX(-10px)}.stack:hover .ph:nth-child(3){transform:rotate(8deg) translateX(10px)}
+.meta{display:flex;justify-content:space-between;grid-column:1/-1;padding-block:18px;border-top:1px solid var(--line)}
+.scroll{display:flex;align-items:center;gap:10px}.scroll b{width:1px;height:34px;background:var(--acc);animation:sc 1.6s infinite;transform-origin:top}
+@keyframes sc{0%{transform:scaleY(0)}60%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.mark{font:800 clamp(90px,27vw,520px)/.8 var(--h);letter-spacing:-.06em;text-transform:uppercase;white-space:nowrap;display:flex;justify-content:center;padding-block:10px 0;user-select:none}
+.mark span{display:inline-block;transition:transform .4s,color .3s;transform:translateY(40%);opacity:0;animation:up2 .9s forwards}
+.mark span:hover{color:var(--acc);transform:translateY(-6%) skewX(-6deg)}
+.mark sup{font-size:.14em;align-self:flex-start;margin-top:.5em;color:var(--acc)}
+@keyframes up2{to{transform:none;opacity:1}}
+.tick{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;font:800 clamp(20px,3vw,34px) var(--h);text-transform:uppercase}
+.tick div{display:inline-block;animation:mq 30s linear infinite}.tick span{margin-inline:22px;color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(max-width:860px){.hero{grid-template-columns:1fr}.stack{height:420px}}
+/* sections */
+section{padding-block:clamp(70px,11vw,160px)}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.sh h2{font-size:clamp(44px,8vw,128px)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line);padding:9px 16px;border-radius:99px;font-size:14px;transition:.2s}
+.filters button:hover{border-color:var(--ink)}.filters button[aria-pressed=true]{background:var(--acc);color:#0b0b0b;border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:18px}
+.card{display:block;text-align:left;width:100%;animation:fade .6s both}
+@keyframes fade{from{opacity:0;transform:translateY(24px)}}
+.card:nth-child(4n+2){margin-top:44px}.card:nth-child(4n+4){margin-top:22px}
+.th{aspect-ratio:9/16;border-radius:12px;overflow:hidden;position:relative;background:#171717}
+.th video,.th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card:hover .th video,.card:hover .th img{transform:scale(1.05)}
+.th::after{content:"▶";position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:var(--acc);color:#0b0b0b;display:grid;place-items:center;font-size:13px;opacity:0;transform:scale(.6);transition:.3s}
+.card:hover .th::after,.card:focus-visible .th::after{opacity:1;transform:none}
+.card h3{font-size:22px;line-height:1;margin-top:12px;letter-spacing:-.02em}
+.card .lbl{margin-top:6px}
+.slot .th{border:1.5px dashed #3a3a37;background:repeating-linear-gradient(135deg,#111 0 10px,#151514 10px 20px);display:grid;place-items:center;text-align:center;padding:20px;color:var(--mut);font-size:14px}
+.slot .th::after{display:none}
+/* modal */
+dialog{border:0;padding:0;background:#0f0f0e;color:var(--ink);width:min(960px,94vw);max-height:92svh;border-radius:16px;overflow:auto}
+dialog::backdrop{background:#000d;backdrop-filter:blur(6px)}
+.md{display:grid;grid-template-columns:minmax(0,.9fr) 1.1fr}
+.md video{width:100%;max-height:88svh;aspect-ratio:9/16;object-fit:cover;background:#000;display:block}
+.mi{padding:clamp(22px,4vw,44px);display:flex;flex-direction:column;gap:16px;justify-content:center}
+.mi h3{font-size:clamp(34px,5vw,64px)}
+.x{position:absolute;top:12px;right:14px;z-index:3;width:42px;height:42px;border-radius:50%;background:var(--acc);color:#0b0b0b;font-size:18px}
+@media(max-width:700px){.md{grid-template-columns:1fr}.md video{max-height:60svh}}
+/* showreel */
+.reel{padding:0;position:relative;color:#fff}
+.reel-pin{position:relative;height:100svh;overflow:hidden;display:flex;align-items:flex-end}
+.reel-media{position:absolute;inset:0;cursor:pointer;background:#000}
+.reel-media video{width:100%;height:100%;object-fit:cover;display:block}
+.reel-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#000d,transparent 60%);pointer-events:none}
+.reel-copy{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(20px,4vw,60px);align-items:end;padding-block:clamp(24px,5vw,64px);pointer-events:none}
+.reel .lbl{color:#c8ff2e}
+.reel h2{font-size:clamp(46px,9vw,150px)}
+.reel-note{max-width:420px;font-size:18px;margin:0;padding:22px 24px;border-radius:20px}
+.play{position:absolute;inset:0;margin:auto;z-index:2;width:92px;height:92px;border-radius:50%;background:#c8ff2e;color:#0b0b0b;display:grid;place-items:center;font:800 13px var(--h);letter-spacing:.08em;transition:transform .3s}
+.reel-media:hover .play{transform:scale(1.12) rotate(-8deg)}
+@media(max-width:820px){.reel-copy{grid-template-columns:1fr}}
+/* about */
+.ab{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,6vw,100px)}
+.ab figure{margin:0;position:sticky;top:90px;align-self:start}
+.ab .im{overflow:hidden;border-radius:6px}.ab img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover}
+.ab figcaption{display:flex;justify-content:space-between;margin-top:12px}
+.big{font:500 clamp(26px,3.4vw,48px)/1.12 var(--h);letter-spacing:-.025em;margin:0 0 34px}
+.big em{font-style:normal;color:var(--acc)}
+.ab p{color:#c4c3bc;max-width:560px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.facts div{padding:16px 0;border-bottom:1px solid var(--line)}.facts b{display:block;font-weight:500}
+@media(max-width:820px){.ab{grid-template-columns:1fr}.ab figure{position:static;max-width:380px}}
+/* services */
+.sv{border-top:1px solid var(--line)}
+.sv li{list-style:none;border-bottom:1px solid var(--line);display:grid;grid-template-columns:80px 1fr 1fr;gap:20px;align-items:center;padding:26px 0;position:relative;transition:padding .35s,color .3s}
+.sv{margin:0;padding:0}
+.sv li::before{content:"";position:absolute;inset:0 -20px;background:var(--acc);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.7,0,.2,1);z-index:-1}
+.sv li:hover{color:#0b0b0b;padding-inline:20px}.sv li:hover::before{transform:none}.sv li:hover p,.sv li:hover .lbl{color:#0b0b0b}
+.sv h3{font-size:clamp(30px,5vw,72px)}.sv p{margin:0;color:var(--mut);max-width:440px}
+@media(max-width:760px){.sv li{grid-template-columns:1fr;gap:8px}}
+/* process */
+.pr-bar{position:relative;height:2px;background:var(--line);overflow:hidden;margin-bottom:30px}
+.pr-bar i{position:absolute;inset:0;background:var(--acc);transform-origin:left;transform:scaleX(var(--p,1))}
+[dir=rtl] .pr-bar i{transform-origin:right}
+.pr{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:st}
+.st{counter-increment:st;position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:320px;padding:28px;border-radius:22px}
+.st h3{font-size:clamp(30px,3.6vw,54px);margin:14px 0}.st p{color:var(--mut);margin:0;max-width:340px}
+.st::after{content:"0" counter(st);position:absolute;right:18px;bottom:-.12em;font:800 clamp(90px,10vw,170px)/1 var(--h);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px var(--glass-brd,#333);pointer-events:none}
+[dir=rtl] .st::after{right:auto;left:18px}
+@media(max-width:900px){.pr{grid-template-columns:1fr 1fr}}@media(max-width:560px){.pr{grid-template-columns:1fr}.st{min-height:240px}}
+/* contact */
+.ct h2{font-size:clamp(50px,11.5vw,200px);margin-bottom:28px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,90px);margin-top:48px}
+.cl a{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line);font:500 clamp(20px,2.4vw,30px) var(--h);transition:.25s}
+.cl a:hover{color:var(--acc);padding-left:12px}.cl a span{font:400 13px var(--b);color:var(--mut);align-self:center}
+form{display:grid;gap:14px}
+label{display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #3a3a37;padding:10px 0;border-radius:0}
+select option{background:#111}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--acc)}
+footer{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:30px;border-top:1px solid var(--line)}
+@media(max-width:820px){.cg{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.on{opacity:1;transform:none}
+/* theme + i18n */
+[data-theme=light]{--bg:#f3f2ec;--ink:#0b0b0b;--mut:#6b6b66;--line:#d6d5cc;--acc:#5c8a00;color-scheme:light}
+[data-theme=light] nav{mix-blend-mode:normal}
+[data-theme=light] .hero p,[data-theme=light] .ab p{color:#4a4a46}[data-theme=light] #md{color:#4a4a46!important}
+[data-theme=light] dialog{background:#fbfaf6}[data-theme=light] .th,[data-theme=light] .ph{background:#dcdbd3}
+[data-theme=light] .slot .th{background:repeating-linear-gradient(135deg,#e8e7df 0 10px,#e1e0d8 10px 20px);border-color:#b9b8b0}
+[data-theme=light] input,[data-theme=light] select,[data-theme=light] textarea{border-color:#b9b8b0}[data-theme=light] select option{background:#fff}
+.tools{display:flex;gap:14px;align-items:center;font-size:13px}.tools button{opacity:.55;padding:4px 2px;letter-spacing:.06em}.tools button:hover,.tools button[aria-pressed=true]{opacity:1}.tools [aria-pressed=true]{text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--acc)}.lang{display:flex;gap:10px}#th{opacity:1;font-size:18px;line-height:1}
+@media(max-width:760px){.tools{order:2}.burger{order:3}}
+.mark,.tick,.logo{direction:ltr}
+[lang=ar]{--h:'Cairo','Segoe UI',Tahoma,sans-serif;--b:'Cairo','Segoe UI',Tahoma,sans-serif}
+[lang=ar] h1,[lang=ar] h2,[lang=ar] h3{letter-spacing:0;line-height:1.15;text-transform:none}[lang=ar] .lbl{letter-spacing:0}[lang=ar] .mark,[lang=ar] .logo{font-family:'Bricolage Grotesque','Arial Narrow',Impact,sans-serif}
+[lang=fr] .hero h1{font-size:clamp(40px,7.4vw,130px)}
+[dir=rtl] .cl a:hover{padding-left:0;padding-right:12px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+<link rel="stylesheet" href="assets/css/motion.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+</head><body>
+<div class="aura" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="cur" aria-hidden="true"><span></span></div>
+<div class="svp glass" aria-hidden="true"><video muted loop playsinline preload="none"></video></div>
+<nav><a href="#top" class="logo" aria-label="YUCHA home">YUCHA<sup>®</sup></a>
+<button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="lk">☰</button>
+<div class="links" id="lk"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="#contact" class="cta">Let’s talk ↗</a></div><div class="tools"><div class="lang" role="group" aria-label="Language"><button data-l="en" lang="en">EN</button><button data-l="fr" lang="fr">FR</button><button data-l="ar" lang="ar">عربي</button></div><button id="th" aria-label="Toggle light or dark mode"></button></div></nav>
+
+<header id="top" class="w hero">
+<div><p class="lbl acc" style="margin:0 0 22px">YUCHA® — Independent Visual Creator</p>
+<h1><span><i>Making visuals</i></span><span><i>that <em class="acc" style="font-style:normal">move</em> you.</i></span></h1>
+<p>Video editor, photographer &amp; designer crafting visuals that capture attention and tell stories.</p>
+<div class="btns"><a class="cta" href="#work">Explore my work</a><a class="ghost" href="#contact">Let’s work together</a></div></div>
+<div class="stack"><div class="ph" aria-hidden="true"><video data-m="0" muted loop playsinline autoplay></video></div><div class="ph" aria-hidden="true"><video data-m="1" muted loop playsinline autoplay></video></div><div class="ph" aria-hidden="true"><video data-m="2" muted loop playsinline autoplay></video></div><p class="badge glass"><b></b><span>Available for new projects</span></p><span class="chip glass" aria-hidden="true">4K · 9:16 · 25 FPS</span></div>
+<div class="meta lbl"><span>Based in Morocco</span><span class="scroll"><b></b>Scroll</span><span>Portfolio ’26</span></div>
+</header>
+<div class="mark w" id="mark" aria-label="YUCHA"></div>
+<div class="tick glass" aria-hidden="true"><div id="tk"></div></div>
+
+<section id="work" class="w"><div class="sh"><h2>Selected<br><span class="acc">work</span></h2>
+<div class="filters glass" role="group" aria-label="Filter work"></div></div>
+<div class="grid" id="grid"></div></section>
+
+<section class="reel" id="reel"><div class="reel-pin">
+<div class="reel-media" role="button" tabindex="0" id="pf" aria-label="Play showreel"><video data-m="3" muted loop playsinline autoplay></video><span class="play">PLAY</span></div>
+<div class="reel-copy w"><div><p class="lbl">Showreel</p><h2>A little bit of everything.</h2></div>
+<p class="reel-note glass">Fast rhythm, clean detail and a clear point of view — edits, shoots and designs that keep their own identity from the first frame to the last.</p></div></div></section>
+
+<section id="about" class="w"><div class="ab">
+<figure class="rv"><div class="im"><img id="me" alt="Portrait of Yassine Alloul wearing a motorcycle helmet under green light"></div><figcaption class="lbl"><span>Yassine Alloul</span><span>Morocco</span></figcaption></figure>
+<div class="rv"><p class="lbl">About</p><p class="big">I’m Yassine Alloul, also known as <em>YUCHA</em> — a 22-year-old visual creator studying Graphic Design and Advertising at Ibn Tofail University in Morocco.</p>
+<p>My work brings together video editing, photography, photo retouching, and graphic design. I’m interested in the details that make an image feel different, the rhythm that makes a video engaging, and the visual decisions that turn an idea into something memorable.</p>
+<p>I approach every project as an opportunity to experiment, tell a story, and create something with its own identity.</p>
+<p>Whether it’s a cinematic edit, a promotional video, a photograph, or a complete visual concept, my goal is simple: <span class="acc">make it meaningful, make it memorable, make it stand out.</span></p>
+<div class="facts"><div><span class="lbl">Age</span><b>22</b></div><div><span class="lbl">Studies</span><b>Ibn Tofail University</b></div><div><span class="lbl">Field</span><b>Graphic Design &amp; Advertising</b></div><div><span class="lbl">Based</span><b>Morocco</b></div></div></div></div></section>
+
+<section id="services" class="w"><div class="sh"><h2>What I<br><span class="acc">do</span></h2></div>
+<ul class="sv" id="sv"></ul></section>
+
+<section class="w" id="process"><div class="sh"><h2>How I<br><span class="acc">work</span></h2></div>
+<div class="pr-bar"><i></i></div><div class="pr"><div class="st glass rv"><span class="lbl">01</span><h3>Discover</h3><p>Understand the idea, audience, and objective.</p></div><div class="st glass rv"><span class="lbl">02</span><h3>Plan</h3><p>Develop the visual direction and creative approach.</p></div><div class="st glass rv"><span class="lbl">03</span><h3>Create</h3><p>Edit, design, shoot, and refine the content.</p></div><div class="st glass rv"><span class="lbl">04</span><h3>Deliver</h3><p>Prepare the final work for its intended platform.</p></div></div></section>
+
+<section id="contact" class="w ct"><p class="lbl">Contact</p><h2>Have a<br>project <span class="acc">in mind?</span></h2>
+<p style="font-size:22px;max-width:520px;margin:0">Let’s turn your next idea into something worth watching.</p>
+<div class="cg"><div class="cl" id="cl"></div>
+<form id="f" class="glass"><label><span class="lbl">Name</span><input name="n" required autocomplete="name"></label><label><span class="lbl">Email</span><input name="e" type="email" required autocomplete="email"></label>
+<label><span class="lbl">Project type</span><select name="t"><option>Video editing</option><option>Video production</option><option>Photography</option><option>Photo editing</option><option>Graphic design</option><option>Something else</option></select></label>
+<label><span class="lbl">Message</span><textarea name="m" rows="4" required></textarea></label>
+<button class="cta" type="submit" style="justify-self:start">Send inquiry ↗</button></form></div></section>
+
+<footer class="w"><a href="#top" class="logo">YUCHA<sup>®</sup></a><span class="lbl">Independent Visual Creator · © <span id="yr"></span></span><a href="#top" class="ghost">Back to top ↑</a></footer>
+
+<dialog id="dlg" class="glass" aria-label="Project details" data-lenis-prevent><button class="x" aria-label="Close">✕</button><div class="md"><video id="mv" controls playsinline loop></video><div class="mi"><p class="lbl" id="mc"></p><h3 id="mt"></h3><p id="md" style="color:#c4c3bc;margin:0"></p><div class="btns"><a class="cta" id="ml" href="#" target="_blank" rel="noopener">View original ↗</a></div></div></div></dialog>
+
+<div class="hud glass" aria-hidden="true"><span class="rec"><b></b>REC</span><span id="tc">00:00:00:00</span><div class="tl" id="tl"><i id="ph"></i></div><span id="clip">01 / Intro</span></div>
+
+<script>
+/* ===== EDIT ME ===== */
+const CONFIG={email:'[YOUR EMAIL]',instagram:'[YOUR INSTAGRAM URL]',showreel:'[YOUR SHOWREEL URL]',whatsapp:'[YOUR WHATSAPP LINK]'};
+// link = full-quality original (YouTube/Drive/etc). m = index of the embedded preview loop.
+const W=[
+{m:0,t:'Honor X7e',c:'Video Editing',link:'#'},{m:1,t:'Kieslect Pura 3',c:'Video Editing',link:'#'},{m:2,t:'SoundPEATS Air 5 Pro',c:'Video Editing',link:'#'},{m:3,t:'Lux Giveaway',c:'Video Editing',link:'#'},
+{m:4,t:'Honda Forland T5E — V1',c:'Video Editing',link:'#'},{m:5,t:'Honda Forland T5E — V2',c:'Video Editing',link:'#'},{m:6,t:'Honda Forland T5E — V3',c:'Video Editing',link:'#'},{m:7,t:'Honda Forland L5E — V4',c:'Video Editing',link:'#'},{m:8,t:'NB',c:'Video Editing',link:'#'},{m:9,t:'Nktachfo Bladna',c:'Video Editing',link:'#'},
+{slot:'Add a 16:9 film or commercial',t:'Your production project',c:'Filmmaking'},{slot:'Add an editorial photo set',t:'Your photo series',c:'Photography'},{slot:'Add before / after retouch',t:'Your retouching work',c:'Photo Editing'},{slot:'Add a poster or ad mockup',t:'Your design project',c:'Graphic Design'}];
+const DESC='Vertical 9:16 short-form edit made for social platforms.';
+const S=[['Video Editing','YouTube videos, Instagram Reels, TikTok videos, short-form content, promotional edits, and cinematic storytelling.'],['Video Production','Filming, visual composition, camera work, and creating footage for digital content and promotional projects.'],['Photography','Portraits, product photography, creative shoots, and visual content for personal brands and businesses.'],['Photo Editing','Professional retouching, color correction, image enhancement, and creative photo manipulation.'],['Graphic Design','Social media visuals, advertising creatives, posters, promotional graphics, and visual identity assets.']];
+/* ===== MEDIA (embedded previews) ===== */
+const V=['assets/previews/honor-x7e.mp4','assets/previews/kieslect-pura-3.mp4','assets/previews/soundpeats-air-5-pro.mp4','assets/previews/lux-giveaway.mp4','assets/previews/honda-forland-t5e-v1.mp4','assets/previews/honda-forland-t5e-v2.mp4','assets/previews/honda-forland-t5e-v3.mp4','assets/previews/honda-forland-l5e-v4.mp4','assets/previews/nb.mp4','assets/previews/nktachfo-bladna.mp4'];const P=['assets/posters/honor-x7e.jpg','assets/posters/kieslect-pura-3.jpg','assets/posters/soundpeats-air-5-pro.jpg','assets/posters/lux-giveaway.jpg','assets/posters/honda-forland-t5e-v1.jpg','assets/posters/honda-forland-t5e-v2.jpg','assets/posters/honda-forland-t5e-v3.jpg','assets/posters/honda-forland-l5e-v4.jpg','assets/posters/nb.jpg','assets/posters/nktachfo-bladna.jpg'];
+document.getElementById('me').src='assets/yassine.webp';
+document.querySelectorAll('[data-m]').forEach(v=>{v.src=V[v.dataset.m];v.poster=P[v.dataset.m]});
+const $=s=>document.querySelector(s),g=$('#grid');
+$('#yr').textContent=new Date().getFullYear();
+/* wordmark + ticker + services + contact */
+'YUCHA'.split('').forEach((c,i)=>{const s=document.createElement('span');s.textContent=c;s.style.animationDelay=.25+i*.08+'s';$('#mark').append(s)});
+$('#mark').insertAdjacentHTML('beforeend','<sup>®</sup>');
+var TKW={en:['Video editing','Photography','Retouching','Graphic design','Visual storytelling'],fr:['Montage vidéo','Photographie','Retouche','Design graphique','Narration visuelle'],ar:['مونتاج الفيديو','التصوير','التنقيح','التصميم الجرافيكي','السرد البصري']};function setTk(){$('#tk').innerHTML=(TKW[lang]||TKW.en).map(x=>x+'<span>✦</span>').join('').repeat(4)}
+$('#sv').innerHTML=S.map((s,i)=>`<li><span class="lbl">0${i+1}</span><h3>${s[0]}</h3><p>${s[1]}</p></li>`).join('');
+const L=[['Email',CONFIG.email,'mailto:'+CONFIG.email],['Instagram',CONFIG.instagram,CONFIG.instagram],['Showreel',CONFIG.showreel,CONFIG.showreel],['WhatsApp',CONFIG.whatsapp,CONFIG.whatsapp]];
+$('#cl').innerHTML=L.map(l=>`<a href="${l[2]}" target="_blank" rel="noopener">${l[0]}<span>${l[1]}</span></a>`).join('');
+$('#f').onsubmit=e=>{e.preventDefault();const d=new FormData(e.target);location.href=`mailto:${CONFIG.email}?subject=${encodeURIComponent('Project inquiry — '+d.get('t'))}&body=${encodeURIComponent(d.get('m')+'\n\n— '+d.get('n')+' ('+d.get('e')+')')}`};
+/* work grid */
+const cats=['All',...new Set(W.map(w=>w.c))];const fb=$('.filters');
+cats.forEach((c,i)=>{const b=document.createElement('button');b.textContent=tc(c);b.dataset.c=c;b.setAttribute('aria-pressed',i==0);b.onclick=()=>{fb.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x==b));draw(c)};fb.append(b)});
+function draw(c){cur=c;g.innerHTML='';W.filter(w=>c=='All'||w.c==c).forEach((w,i)=>{const a=document.createElement('button');a.className='card'+(w.slot?' slot':'');a.style.animationDelay=i*.05+'s';
+a.innerHTML=w.slot?`<div class="th"><span>${w.slot}<br><small>Edit the W array</small></span></div><h3>${w.t}</h3><p class="lbl">${w.c}</p>`:`<div class="th"><img alt="" loading="lazy" src="${P[w.m]}"></div><h3>${w.t}</h3><p class="lbl">${w.c}</p>`;
+if(!w.slot){const v=document.createElement('video');v.muted=v.loop=v.playsInline=true;v.src=V[w.m];const th=a.querySelector('.th');a.onmouseenter=()=>{if(!v.isConnected)th.prepend(v);v.play()};a.onmouseleave=()=>v.pause();a.onclick=()=>open(w)}
+else a.onclick=()=>alert('Placeholder — add your own project to the W array in the code.');a.querySelector('.lbl').textContent=tc(w.c);g.append(a)});document.dispatchEvent(new Event('yucha:draw'))}
+draw('All');
+/* modal */
+const dlg=$('#dlg'),mv=$('#mv');
+function open(w,src){mv.src=src||V[w.m];$('#mc').textContent=tc(w.c);$('#mt').textContent=w.t;$('#md').textContent=w.d||(lang=='fr'?DF:lang=='ar'?DA:DESC);$('#ml').href=w.link||'#';dlg.showModal();mv.play().catch(()=>{})}
+const close=()=>{mv.pause();dlg.close()};$('.x').onclick=close;dlg.onclick=e=>{if(e.target==dlg)close()};dlg.onclose=()=>mv.pause();
+const pf=$('#pf'),rl=()=>open({m:3,t:'Showreel',c:'Featured',d:'A little bit of everything — replace with your showreel link in CONFIG.',link:CONFIG.showreel});pf.onclick=rl;pf.onkeydown=e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();rl()}};
+/* nav + reveal */
+const bg=$('.burger'),lk=$('#lk');bg.onclick=()=>{const o=lk.classList.toggle('o');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};lk.querySelectorAll('a').forEach(a=>a.onclick=()=>{lk.classList.remove('o');bg.textContent='☰'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* ===== THEME + LANGUAGE ===== */
+var lang=document.documentElement.lang||'en',cur,CAT={fr:{All:'Tout','Video Editing':'Montage vidéo',Filmmaking:'Réalisation',Photography:'Photographie','Photo Editing':'Retouche photo','Graphic Design':'Design graphique'},ar:{All:'الكل','Video Editing':'مونتاج الفيديو',Filmmaking:'إنتاج الأفلام',Photography:'التصوير','Photo Editing':'تعديل الصور','Graphic Design':'التصميم الجرافيكي'}};
+function tc(c){return(CAT&&CAT[lang]&&CAT[lang][c])||c}
+const DF='Montage vertical 9:16 pensé pour les réseaux sociaux.',DA='مونتاج عمودي 9:16 مخصص لمنصات التواصل.',EM='<em class="acc" style="font-style:normal">';
+// [selector, French[], Arabic[]] — English is read from the page itself
+const TR=[
+['.links a:not(.cta)',['Travaux','À propos','Services','Contact'],['أعمالي','نبذة','خدماتي','تواصل']],
+['.links .cta',['Parlons-en ↗'],['لنتحدث ↗']],
+['.hero .lbl.acc',['YUCHA® — Créateur visuel indépendant'],['YUCHA® — صانع محتوى بصري مستقل']],
+['.hero h1 span:nth-child(1) i',['Des visuels'],['صور']],
+['.hero h1 span:nth-child(2) i',['qui '+EM+'marquent</em>.'],['تحرّك '+EM+'مشاعرك</em>.']],
+['.hero p:not(.lbl)',['Monteur vidéo, photographe et designer : je crée des visuels qui captent l’attention et racontent des histoires.'],['مونتير فيديو ومصوّر ومصمّم، أصنع محتوى بصريًا يجذب الانتباه ويروي القصص.']],
+['.hero .btns a',['Découvrir mon travail','Travaillons ensemble'],['استكشف أعمالي','لنعمل معًا']],
+['.badge span',['Disponible pour de nouveaux projets'],['متاح لمشاريع جديدة']],
+['.meta span:nth-child(1)',['Basé au Maroc'],['مقيم في المغرب']],
+['.meta .scroll',['<b></b>Défiler'],['<b></b>مرّر']],
+['.meta span:nth-child(3)',['Portfolio ’26'],['معرض أعمال ’26']],
+['#work h2',['Projets<br><span class="acc">choisis</span>'],['أعمال<br><span class="acc">مختارة</span>']],
+['.reel .lbl',['Showreel'],['عرض الأعمال']],
+['.reel h2',['Un peu de tout.'],['القليل من كل شيء.']],
+['.reel p:not(.lbl)',['Un rythme rapide, des détails soignés et un point de vue clair : des montages, tournages et designs qui gardent leur identité de la première à la dernière image.'],['إيقاع سريع وتفاصيل دقيقة ووجهة نظر واضحة؛ مونتاج وتصوير وتصاميم تحتفظ بهويتها من الإطار الأول إلى الأخير.']],
+['.play',['LIRE'],['تشغيل']],
+['.ab .rv > p.lbl',['À propos'],['نبذة عني']],
+['.ab .big',['Je suis Yassine Alloul, alias <em>YUCHA</em> — créateur visuel de 22 ans, étudiant en design graphique et publicité à l’Université Ibn Tofail, au Maroc.'],['أنا ياسين علّول، المعروف باسم <em>YUCHA</em> — صانع محتوى بصري عمري 22 سنة، أدرس التصميم الغرافيكي والإعلان في جامعة ابن طفيل بالمغرب.']],
+['.ab .rv > p:not(.lbl):not(.big)',['Mon travail réunit montage vidéo, photographie, retouche photo et design graphique. Je m’intéresse aux détails qui rendent une image différente, au rythme qui rend une vidéo captivante et aux choix visuels qui transforment une idée en quelque chose de mémorable.','J’aborde chaque projet comme une occasion d’expérimenter, de raconter une histoire et de créer quelque chose avec sa propre identité.','Montage cinématographique, vidéo promotionnelle, photographie ou concept visuel complet : mon objectif est simple — <span class="acc">lui donner du sens, le rendre mémorable, le faire ressortir.</span>'],['يجمع عملي بين مونتاج الفيديو والتصوير وتنقيح الصور والتصميم الغرافيكي. تهمّني التفاصيل التي تجعل الصورة مختلفة، والإيقاع الذي يجعل الفيديو جذابًا، والقرارات البصرية التي تحوّل الفكرة إلى شيء لا يُنسى.','أتعامل مع كل مشروع كفرصة للتجريب وسرد قصة وصنع شيء له هويته الخاصة.','سواء كان مونتاجًا سينمائيًا أو فيديو ترويجيًا أو صورة أو مفهومًا بصريًا متكاملًا، هدفي بسيط: <span class="acc">أن يكون ذا معنى، لا يُنسى، ويبرز.</span>']],
+['.ab figcaption span:last-child',['Maroc'],['المغرب']],
+['.facts .lbl',['Âge','Études','Domaine','Lieu'],['العمر','الدراسة','المجال','الموقع']],
+['.facts b',['22','Université Ibn Tofail','Design graphique &amp; publicité','Maroc'],['22','جامعة ابن طفيل','التصميم الغرافيكي والإعلان','المغرب']],
+['#services h2',['Ce que<br><span class="acc">je fais</span>'],['ماذا<br><span class="acc">أقدّم</span>']],
+['#sv h3',['Montage vidéo','Production vidéo','Photographie','Retouche photo','Design graphique'],['مونتاج الفيديو','إنتاج الفيديو','التصوير','تعديل الصور','التصميم الجرافيكي']],
+['#sv p',['Vidéos YouTube, Reels Instagram, vidéos TikTok, contenus courts, montages promotionnels et narration cinématographique.','Tournage, composition visuelle, prise de vue et création d’images pour contenus numériques et projets promotionnels.','Portraits, photographie de produit, shootings créatifs et contenus visuels pour marques personnelles et entreprises.','Retouche professionnelle, correction colorimétrique, amélioration d’image et manipulation photo créative.','Visuels pour réseaux sociaux, créations publicitaires, affiches, supports promotionnels et éléments d’identité visuelle.'],['فيديوهات يوتيوب وريلز إنستغرام وتيك توك ومحتوى قصير ومونتاج ترويجي وسرد سينمائي.','تصوير وتكوين بصري وعمل كاميرا وإنتاج لقطات للمحتوى الرقمي والمشاريع الترويجية.','بورتريه وتصوير منتجات وجلسات إبداعية ومحتوى بصري للعلامات الشخصية والشركات.','تنقيح احترافي وتصحيح ألوان وتحسين الصور وتلاعب إبداعي بالصور.','تصاميم لوسائل التواصل وإعلانات وملصقات ومواد ترويجية وعناصر هوية بصرية.']],
+['#process h2',['Ma<br><span class="acc">méthode</span>'],['طريقة<br><span class="acc">عملي</span>']],
+['.st h3',['Découvrir','Planifier','Créer','Livrer'],['اكتشاف','تخطيط','إنشاء','تسليم']],
+['.st p',['Comprendre l’idée, le public et l’objectif.','Définir la direction visuelle et l’approche créative.','Monter, concevoir, filmer et affiner le contenu.','Préparer le rendu final pour sa plateforme.'],['فهم الفكرة والجمهور والهدف.','تطوير الاتجاه البصري والنهج الإبداعي.','المونتاج والتصميم والتصوير وصقل المحتوى.','تجهيز العمل النهائي للمنصة المقصودة.']],
+['#contact > p.lbl',['Contact'],['تواصل']],
+['#contact h2',['Un projet<br>en <span class="acc">tête ?</span>'],['هل لديك<br>مشروع <span class="acc">في بالك؟</span>']],
+['#contact > p:not(.lbl)',['Donnons vie à votre prochaine idée, pour en faire quelque chose qui mérite d’être regardé.'],['لنحوّل فكرتك القادمة إلى شيء يستحق المشاهدة.']],
+['label .lbl',['Nom','E-mail','Type de projet','Message'],['الاسم','البريد الإلكتروني','نوع المشروع','الرسالة']],
+['#f option',['Montage vidéo','Production vidéo','Photographie','Retouche photo','Design graphique','Autre chose'],['مونتاج الفيديو','إنتاج الفيديو','التصوير','تعديل الصور','التصميم الجرافيكي','شيء آخر']],
+['#f button',['Envoyer ↗'],['إرسال ↗']],
+['footer .lbl',['Créateur visuel indépendant · © <span id="yr"></span>'],['صانع محتوى بصري مستقل · © <span id="yr"></span>']],
+['footer .ghost',['Haut de page ↑'],['العودة للأعلى ↑']],
+['#ml',['Voir l’original ↗'],['عرض الأصل ↗']]];
+function apply(l){lang=l;const d=document.documentElement;d.lang=l;d.dir=l=='ar'?'rtl':'ltr';
+TR.forEach(([s,f,a])=>document.querySelectorAll(s).forEach((e,i)=>{if(e.dataset.en==null)e.dataset.en=e.innerHTML;const v=l=='fr'?f[i]:l=='ar'?a[i]:null;e.innerHTML=v==null?e.dataset.en:v}));
+setTk();$('#yr').textContent=new Date().getFullYear();fb.querySelectorAll('button').forEach(b=>b.textContent=tc(b.dataset.c));draw(cur||'All');
+document.querySelectorAll('[data-l]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l==l));try{localStorage.setItem('yl',l)}catch(e){}document.dispatchEvent(new Event('yucha:lang'))}
+document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>apply(b.dataset.l));
+const th=$('#th');function setTh(t){document.documentElement.dataset.theme=t;th.textContent=t=='dark'?'☀':'☾';th.setAttribute('aria-label',t=='dark'?'Switch to light mode':'Switch to dark mode');try{localStorage.setItem('yt',t)}catch(e){}}
+th.onclick=()=>setTh(document.documentElement.dataset.theme=='dark'?'light':'dark');setTh(document.documentElement.dataset.theme||'dark');apply(lang);
+</script></body></html>

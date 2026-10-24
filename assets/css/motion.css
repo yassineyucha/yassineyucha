@@ -1,0 +1,84 @@
+/* ===== YUCHA motion layer: glass surfaces + scroll choreography =====
+   Glass works without JS. Scroll effects only switch on when motion.js adds `.m` to <html>. */
+:root{--glass:rgba(20,20,18,.38);--glass-tint:rgba(255,255,255,.07);--glass-brd:rgba(255,255,255,.13);--glass-hi:rgba(255,255,255,.18);--glass-shadow:0 24px 60px rgba(0,0,0,.35);--blur:20px;--ease:cubic-bezier(.16,1,.3,1);--aura-a:rgba(200,255,46,.16);--aura-b:rgba(124,92,255,.18);--aura-c:rgba(0,190,255,.10)}
+[data-theme=light]{--glass:rgba(255,255,255,.42);--glass-tint:rgba(255,255,255,.5);--glass-brd:rgba(0,0,0,.08);--glass-hi:rgba(255,255,255,.95);--glass-shadow:0 24px 60px rgba(40,40,20,.12);--aura-a:rgba(140,200,0,.22);--aura-b:rgba(124,92,255,.14);--aura-c:rgba(0,170,255,.12)}
+body{background:transparent}
+/* lenis */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+
+/* ---------- glass surface ---------- */
+.glass,nav::before{background:radial-gradient(420px circle at var(--mx,-999px) var(--my,-999px),rgba(255,255,255,.13),transparent 55%),linear-gradient(135deg,var(--glass-tint),transparent 55%),var(--glass);-webkit-backdrop-filter:blur(var(--blur)) saturate(170%);backdrop-filter:blur(var(--blur)) saturate(170%);border:1px solid var(--glass-brd);box-shadow:inset 0 1px 0 var(--glass-hi),var(--glass-shadow)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass,nav::before{background-color:rgba(18,18,16,.94)}[data-theme=light] .glass,[data-theme=light] nav::before{background-color:rgba(250,250,246,.95)}}
+
+/* ambient light the glass refracts */
+.aura{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.aura i{position:absolute;width:70vmax;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,var(--aura-a),transparent);will-change:transform}
+.aura i:nth-child(1){left:-25vmax;top:-30vmax}
+.aura i:nth-child(2){right:-30vmax;top:20vh;background:radial-gradient(closest-side,var(--aura-b),transparent)}
+.aura i:nth-child(3){left:15vw;top:70vh;background:radial-gradient(closest-side,var(--aura-c),transparent)}
+
+/* ---------- nav: turns into a floating glass pill ---------- */
+nav{transition:transform .7s var(--ease),padding .5s var(--ease),top .5s var(--ease),left .5s var(--ease),right .5s var(--ease)}
+nav::before{content:"";position:absolute;inset:0;border-radius:99px;opacity:0;transition:opacity .4s;z-index:-1;pointer-events:none}
+nav.s{mix-blend-mode:normal;top:calc(env(safe-area-inset-top,0px) + 10px);left:clamp(10px,2.4vw,40px);right:clamp(10px,2.4vw,40px);padding:10px 12px 10px 22px}
+nav.s::before{opacity:1}
+nav.hide{transform:translateY(-160%)}
+nav:has(.links.o)::before{opacity:0}
+/* any transform on nav would trap the fixed mobile menu inside it, so phones keep the nav pinned */
+@media(max-width:760px){nav.hide{transform:none}}
+
+/* ---------- hero glass chips ---------- */
+.badge{position:absolute;left:-6%;bottom:9%;z-index:4;display:flex;align-items:center;gap:10px;margin:0;padding:12px 18px;border-radius:99px;font-size:13px}
+.badge b{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 var(--acc)}70%,100%{box-shadow:0 0 0 10px transparent}}
+.chip{position:absolute;right:-2%;top:3%;z-index:4;padding:9px 14px;border-radius:12px;font:500 11px var(--b);letter-spacing:.14em;font-variant-numeric:tabular-nums;direction:ltr}
+@media(max-width:860px){.badge{left:3%}.chip{right:3%}}
+
+.tick.glass{border-inline:0;border-radius:0;box-shadow:inset 0 1px 0 var(--glass-hi)}
+.filters.glass{padding:6px;border-radius:99px}.filters.glass button{border-color:transparent}
+form.glass{padding:clamp(22px,3vw,38px);border-radius:24px}
+dialog.glass{--glass:rgba(15,15,14,.74)}[data-theme=light] dialog.glass{--glass:rgba(251,250,246,.82)}
+.reel .glass{--glass:rgba(20,20,18,.36);--glass-tint:rgba(255,255,255,.07);--glass-brd:rgba(255,255,255,.14);--glass-hi:rgba(255,255,255,.2)}
+
+/* work cards: hairline glass edge + pointer sheen */
+.th{outline:1px solid var(--glass-brd);outline-offset:-1px}
+.th::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(260px circle at var(--mx,50%) var(--my,-30%),rgba(255,255,255,.24),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover .th::before{opacity:1}.slot .th::before{display:none}
+
+/* ---------- editor HUD: timecode + timeline scrubber ---------- */
+.hud{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;display:flex;align-items:center;gap:14px;padding:9px 16px;border-radius:99px;font:500 11px/1 var(--b);letter-spacing:.12em;text-transform:uppercase;font-variant-numeric:tabular-nums;direction:ltr;transform:translate(-50%,170%);transition:transform .8s var(--ease)}
+.hud.on{transform:translate(-50%,0)}
+.rec{display:flex;gap:6px;align-items:center;color:#ff5a4d}.rec b{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.tl{position:relative;width:min(30vw,300px);height:16px;display:flex;gap:2px;cursor:pointer}
+.tl span{height:100%;border-radius:3px;background:var(--glass-brd);transition:background .3s}
+.tl span:hover{background:var(--mut)}.tl span.on{background:color-mix(in srgb,var(--acc) 55%,transparent)}
+.tl i{position:absolute;top:-4px;bottom:-4px;left:0;width:2px;border-radius:2px;background:var(--acc);box-shadow:0 0 10px var(--acc);pointer-events:none}
+#clip{min-width:96px;color:var(--mut)}
+@media(max-width:700px){.tl,#clip{display:none}}
+
+/* ---------- cursor follower + service preview ---------- */
+.cur{position:fixed;left:0;top:0;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:96;display:grid;place-items:center;color:#0b0b0b;font:800 12px var(--h);letter-spacing:.08em;text-transform:uppercase;opacity:0}
+.cur span{opacity:0;transition:opacity .2s}
+.cur.lbl-on{mix-blend-mode:normal;background:var(--acc)}.cur.lbl-on span{opacity:1}
+.svp{position:fixed;left:0;top:0;width:200px;aspect-ratio:9/16;margin:-178px 0 0 -100px;padding:6px;border-radius:20px;pointer-events:none;z-index:30;opacity:0}
+.svp video{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
+
+/* ---------- word splitting ---------- */
+.wd{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em;margin-bottom:-.12em}
+.wi{display:inline-block;transform-origin:0 100%}
+.big .wd{overflow:visible;padding:0;margin:0}
+
+/* ---------- states owned by GSAP once motion is on ---------- */
+.m .ph,.m .cta,.m .ghost{transition:background .25s,color .25s,border-color .25s}
+.m .card,.m .mark span,.m .tick div{animation:none}
+.m .mark span{opacity:1;position:relative;color:transparent;-webkit-text-stroke:1.5px color-mix(in srgb,var(--ink) 45%,transparent)}
+.m .mark span::after{content:attr(data-c);position:absolute;left:0;top:0;color:var(--ink);-webkit-text-stroke:0;clip-path:inset(var(--f,0%) 0 0 0);transition:color .3s,transform .4s}
+.m .mark span:hover::after{color:var(--acc);transform:skewX(-6deg)}
+.m-h #process{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:96px 70px;overflow:hidden}
+.m-h .pr{display:flex;width:max-content}
+.m-h .st{width:clamp(340px,40vw,600px);min-height:min(52vh,460px)}
+.m-h .st.rv{transition:none;opacity:1;transform:none}
